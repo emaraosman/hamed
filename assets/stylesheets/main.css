@@ -1,0 +1,427 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+||||||||||||||||||||||||||||||||||||||||
+||||||||||STYLES BEGIN BELOW||||||||||||
+||||||||||||||||||||||||||||||||||||||||
+*/
+
+@font-face {
+  font-family: 'la-viola';
+  src: url('la-viola.ttf') format('truetype');
+}
+
+
+html{
+  height:100%;
+  width: 100%;
+
+}
+
+body{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+.disflex{
+  display:flex;
+  flex-direction: row;
+
+}
+
+.hero-container{
+  background-color: black;
+  min-height: 480px;
+  height: 100%;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+section{
+  box-shadow: -7px, 0px, 59px, 9px, rgba(0,0,0,0.6)
+  //border-left: 1px solid black;
+  height:100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+#welcome{
+  background-image: url("../images/welcomepic.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 10;
+  z-index: 0;
+}
+
+#about-me{
+  background-image: url("../images/aboutpic.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+  z-index: 1;
+  box-shadow: -7px, 0px, 59px, 9px, rgba(0,0,0,0.6);
+}
+
+#media{
+  background-image: url("../images/mediapic.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+  z-index: 2;
+
+}
+
+#contact{
+  background-image: url("../images/contactpic.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+  z-index: 3;
+
+}
+
+.overlay{
+  max-width: inherit;
+  max-height: inherit;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0.67;
+  filter:brightness(1);
+  box-shadow: inset -20px 0px 9px -12px rgba(0,0,0,1);
+  overflow: hidden;
+}
+
+
+section:hover{
+  transition: .3s;
+  filter:brightness(110%);
+  box-shadow: -5px 0px 45px 0px black;
+}
+
+/*.focus{
+  filter: brightness(1);
+
+}*/
+
+.label{
+  position: relative;
+  left:-25px;
+  top:40%;
+  transform: rotate(270deg);
+  transform-origin: right bottom 0;
+  float: left;
+  text-align: left;
+  vertical-align: middle;
+  margin: auto 0;
+  text-decoration: underline;
+  color: white;
+  letter-spacing: 2px;
+  font: 40px "la-viola";
+
+}
+
+.section-title{
+  font: 90px "la-viola";
+  color: white;
+  opacity: 1;
+  overflow: hidden;
+  text-align: left;
+  width: 85%;
+}
+
+.blurb{
+  font: 40px "Josefin Sans";
+  color: white;
+  text-align: left;
+  margin-top: 40px;
+
+}
+
+ul li{
+  list-style-type: disc;
+  display: inline-block;
+}
+
+
+
+.static-content{
+  max-height: 90%;
+  width: 70%;
+  display: inline-block;
+  position: absolute;
+  text-align: left;
+  margin: 40px 0px 0px -10px;
+}
+
+
+
+.expand-button{
+  display: inline-block;
+  opacity: 1;
+  margin-top: 150px;
+  margin-left: 50px;
+
+}
+
+.expand-button:hover{
+  transform: scale(1.3);
+  transition: 0.5s;
+  cursor: pointer;
+  filter: contrast(300%);
+}
+
+.expand-arrow {
+  margin: 0 auto;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.drawer{
+  margin: 0px;
+  height: 800px;
+  width: 100%;
+  display:block;
+}
+
+/* ABOUT DRAWER*/
+
+#about-drawer{
+  display: none;
+  background-color: black;
+}
+
+.about-message{
+  text-align: left;
+  padding: 40px;
+}
+
+.drawer h1{
+  font: 80px "la-viola";
+  color: white;
+}
+.drawer p{
+  width: 50%;
+  flex: 1;
+  font: 35px "Josefin Sans";
+  color: white;
+  letter-spacing: 5px;
+  line-height: 40px;
+  margin-left: 90px;
+  margin-top:20px;
+  border-left: 20px solid black;
+  box-shadow: -10px 0px 0px -5px white;
+}
+
+
+/*GALLERY SECTION*/
+
+.gallery-container{
+  max-width: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.media-bubble{
+  flex: 1;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  margin: 20px;
+  border-radius: 50%;
+	background-position: center;
+	background-size: cover;
+	border: 2px solid white;
+}
+
+#media-bubble1{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/file_001.jpeg?w=1400&h=")
+}
+
+#media-bubble2{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_4447.jpg?w=1400&h=&crop=1");
+}
+
+#media-bubble3{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_9336.jpg?w=740&h=");
+}
+
+#media-bubble4{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/12334468275_b40ebd7859_o-v2.jpg?w=652&h=&zoom=2");
+}
+
+#media-bubble5{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_5386-v2.jpg?w=740&h=");
+}
+
+#media-bubble6{
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/16820159179_0037ab5b89_k.jpg?w=652&h=&zoom=2");
+}
+
+
+.media-bubble:hover{
+  transform: scale(1.3);
+  transition: .5s;
+}
+
+/*MEDIA DRAWER*/
+.breaker{
+  display: flex;
+}
+
+#media-drawer{
+  display: none;
+  padding: 50px;
+  width: 80%;
+  height: inherit;
+}
+
+.gallery-drawer{
+  display: flex;
+}
+
+#gallery-flex{
+	display: flex;
+  flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+  height: 100%;
+  flex-flow: wrap;
+  margin-left: 40px;
+}
+
+
+.img{
+  margin-left:1px;
+  margin-top: 1px;
+  min-height: 40%;
+  min-width: 350px;
+	background-size: cover;
+	background-position: center;
+}
+
+.img1{
+	flex:3;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/16383961374_6c60285689_o-v2.jpg?w=652&h=&zoom=2");
+}
+
+.img2{
+	flex:1;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/19855694576_f9ce3d244a_o-v2.jpg?w=1400&h=");
+}
+
+.img3{
+	flex:3;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/28501909532_b395bd1a1b_k.jpg?w=1400&h=")
+}
+
+.img4{
+	flex:3;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/file_000.jpeg?w=1400&h=&crop=1")
+}
+
+.img5{
+	flex:1;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/file_001.jpeg?w=1400&h=");
+}
+
+.img6{
+	flex:3;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_4331.jpg?w=1400&h=&crop=1");
+}
+
+.img7{
+	flex:3;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_4447.jpg?w=1400&h=&crop=1");
+}
+
+.img8{
+	flex:1;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_5386-v2.jpg?w=740&h=");
+}
+
+.img9{
+	flex:1;
+	background-image: url("https://algabbani.files.wordpress.com/2017/02/img_9336.jpg?w=740&h=");
+}
+
+.img10{
+	flex:3;
+  background-image: url("https://algabbani.files.wordpress.com/2017/02/12334468275_b40ebd7859_o-v2.jpg?w=652&h=&zoom=2");
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#contact ul li{
+  list-style-type: disc;
+  display: block;
+	margin-top: 20px;
+}
+
+//
