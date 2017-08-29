@@ -140,9 +140,9 @@ section{
   width: 100%;
   height: inherit;
   background-color: rgba(0,0,0,0.5);
-  opacity: 0.67;
+  opacity: 0.8;
   filter:brightness(1);
-  box-shadow: inset -20px 0px 9px -12px rgba(0,0,0,1);
+  box-shadow: inset -20px 0px 9px -16px rgba(0,0,0,1);
   overflow: hidden;
 }
 
@@ -173,6 +173,13 @@ section:hover{
   letter-spacing: 2px;
   font: 40px "la-viola";
 
+}
+
+p.label:hover{
+	cursor: pointer;
+	transition: .2s;
+	transform: rotate(270deg) scale(1.1);
+	filter: brightness(200%) blur(0.8px);
 }
 
 .section-title{
@@ -352,7 +359,9 @@ ul li{
   flex-flow: wrap;
   margin-left: 40px;
 }
-
+.button{
+	text-decoration: none;
+}
 
 .img{
   margin-left:1px;
@@ -418,10 +427,13 @@ a{
 	color: white;
 }
 
-#contact ul li{
-  list-style-type: disc;
-  display: block;
-	margin-top: 20px;
+tr th a:hover{
+	transition: .2s;
+	color: gold;
 }
 
+th{
+	padding: 10px;
+
+}
 //
