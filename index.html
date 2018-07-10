@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hamed Al-Gabbani</title>
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
   <!-- SMOOTH scroll -->
-  <script type="text/javascript" src="assets/stylesheets/smoothscroll.js"></script>
+  <!-- <script type="text/javascript" src="assets/stylesheets/smoothscroll.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.0/smooth-scroll.js"></script>
   <link rel="stylesheet" href="assets/stylesheets/animate.css">
   <link href="assets/stylesheets/main.css" rel="stylesheet">
 </head>
@@ -57,7 +57,7 @@
               </ul>
             </p>
 
-            <a href="#about-drawer" class="smoothScroll">
+            <a data-scroll href="#about-drawer" class="smoothScroll">
               <div id="about-button" class="expand-button blurb">
                 <div>see more</div>
                 <div class="expand-arrow"></div>
@@ -103,7 +103,7 @@
         </div>
 
 
-            <a href="#media-drawer" class="smoothScroll">
+            <a data-scroll href="#media-drawer" class="smoothScroll">
               <div id="media-button" class="expand-button blurb" style="margin:40px;">
                 <div>gallery</div>
                 <div class="expand-arrow"></div>
@@ -184,6 +184,11 @@
 ||||||||||||||BUTTON ACTION
 ||||||||||||||||||||||||||||||||||||||||||
  -->
+
+ <script>
+  var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
 <script type="text/javascript">
 //
 // DRAWER BUTTON OPENER
@@ -221,6 +226,8 @@ $(document).ready(function() {
     });
 
   })
+
+
 
 
 //
